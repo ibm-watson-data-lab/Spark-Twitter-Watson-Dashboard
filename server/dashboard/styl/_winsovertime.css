@@ -1,0 +1,28 @@
+
+.rps-line-chart {
+    height: calc(100% - 60px) !important;
+}
+
+.rps-line-chart .c3-lines > path {
+    transform: translateX(-5px);
+}
+
+.rps-line-chart .c3-circles > .c3-circle {
+    display: none;
+}
+
+.rps-line-chart .c3-circles > .c3-circle:last-child {
+	display: inline;
+    fill: none !important;
+    stroke-width: 5px;
+    transform: translateX(3px);
+}
+
+.rps-line-chart .c3-circles-Spark > .c3-circle:last-child {
+    stroke: #F84E3A;
+}
+
+.rps-line-chart .c3-circles-Human > .c3-circle:last-child {
+    stroke: #008DBE;
+}
+

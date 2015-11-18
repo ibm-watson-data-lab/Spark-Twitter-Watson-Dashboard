@@ -1,0 +1,17 @@
+---
+declared-services:
+  messagehub-spark:
+    label: messagehub
+    plan: Beta
+applications:
+- name: spark-twitter-dashboard
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  host: spark-twitter-dashboard
+  random-route: true
+  disk_quota: 1024M
+  command: node server.js
+  path: .
+  services:
+  - messagehub-spark

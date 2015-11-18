@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="{{assetsBaseUrl}}css/font-awesome.min.css">
+   <link rel="stylesheet" href="{{assetsBaseUrl}}css/mozaik.css">
+   <!-- link rel="stylesheet" href="res/bower_components/bootstrap/dist/css/bootstrap.min.css"-->
+   <title>{{ appTitle }}</title>
+   
+   <style>
+	body  {
+	    background-image: url("res/analytics_bkg.jpg");
+	    background-color: #cccccc;
+	}
+	</style>
+</head>
+<body>
+   <div id="mozaik"></div>
+   {% if env === 'prod' %}
+   <script src="{{assetsBaseUrl}}mozaik.js"></script>
+   {% else %}
+   <script src="{{assetsBaseUrl}}mozaik.js"></script>
+   {% endif %}
+   
+   <div class="credits">Real-Time Twitter Dashboard powered by Watson and Spark</div>
+</body>
+</html>

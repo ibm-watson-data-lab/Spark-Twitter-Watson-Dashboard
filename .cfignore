@@ -1,0 +1,8 @@
+.project
+.jshintrc
+.settings
+.tern-project
+node_modules
+npm-debug.log
+.strong-pm/env.json
+mozaik

@@ -1,0 +1,51 @@
+
+.textOutline {
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    -moz-text-shadow:  -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    -webkit-text-shadow:  -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+
+.topBanner {
+    font-family: Champion;
+    font-size: 6vh;
+    font-weight: 300;
+    height: 100%;
+    letter-spacing: 1px;
+    padding-left: 6.5vw;
+    text-transform: uppercase;
+    width: 100%;
+    position: relative;
+}
+
+.topBanner span {
+    display: inline-block;
+    padding-top: 11vh;
+    vertical-align: top;
+}
+
+.totalGames {
+    width: 9.25vw;
+}
+.totalMoves {
+    width: 9vw;
+}
+.humanScore {
+    color: #315E73;
+    font-size: 9vh;
+    letter-spacing: 3px;
+    margin-left: 0;
+    margin-right: 12vw;
+    margin-top: 3vh;
+    text-align: center;
+    width: 8vw;
+}
+.sparkScore {
+    color: #F84E3A;
+    font-size: 9vh;
+    letter-spacing: 3px;
+    margin-left: 11.75vw;
+    margin-right: 4.75vw;
+    margin-top: 3vh;
+    text-align: center;
+    width: 8.5vw;
+}

@@ -1,0 +1,38 @@
+
+.rps-moves-stats {
+	height: 100%
+}
+
+.rps-moves-stats > div {
+	height: 33%;
+	position: relative;
+	text-align: center;
+}
+
+.rps-moves-stats > div > img {
+    bottom: -2vh;
+    display: inline-block;
+    height: 20vh !important;
+    position: relative;
+}
+
+.rps-moves-stats > div > span {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    display: block;
+    height: 10vh;
+    position: relative;
+}
+
+.nextSparkMove > span {
+    background-image: url("../img/Banner_Next-08.png");
+}
+
+.mostWinningMove > span {
+    background-image: url("../img/Banner_Winning.png");
+}
+
+.mostPopularMove > span {
+    background-image: url("../img/Banner_Popular.png");
+}
