@@ -15,7 +15,7 @@ class SparkTwitterTopHashTags extends Component{
     }
 
     getApiRequest() {
-    	console.log("Calling getApiRquest for topHashTag widget");
+    	//console.log("Calling getApiRquest for topHashTag widget");
         return {
             id: 'sparkTwitter.getTopHashTags',
             params: {
@@ -82,9 +82,6 @@ class SparkTwitterTopHashTags extends Component{
 		  }
       });
 
-//      setTimeout(function () {
-//    	  this.chart.transform('bar');
-//      }.bind(this), 10000);
       window.addEventListener('resize', this.onResize.bind(this));
       this.onResize();
     }

@@ -34,7 +34,6 @@ function messageHubBridge(){
 					})
 				}
 			}
-			createTopicIfNecessary("demo.tweets.watson.topic");
 			_.forEach( topics, function(topic){
 				createTopicIfNecessary(topic);
 			})
@@ -67,7 +66,7 @@ function messageHubBridge(){
 			}
 		})
 		.fail( function(error){
-			console.log("Failed to get list of topics: " + error);
+			console.log("Failed to get list of topics: ", error);
 		});
 	
 	//Helper that consumer a topic from MessageHub
@@ -76,10 +75,16 @@ function messageHubBridge(){
 		instance.consume('consumer_' + topic, consumerInstanceName, { 'auto.offset.reset': 'largest' })
 			.then( function( response ){
 				var consumerInstance = response[0];
+				var inProgress = false;
 				//Set the interval for messages consuming
 				setInterval( function(){
+					if ( inProgress ){
+						return;
+					}
+					inProgress = true;
 					consumerInstance.get(topic)
 						.then(function(data) {
+							inProgress = false;
 							if ( _.isArray(data) ){
 								if ( data.length > 0 ){
 									//Take only the last value
@@ -94,6 +99,7 @@ function messageHubBridge(){
 							}
 						})
 						.fail(function(error) {
+							inProgress = false;
 							console.log("Unable to consume topic: " + topic, error);
 						});
 				}, 4000);

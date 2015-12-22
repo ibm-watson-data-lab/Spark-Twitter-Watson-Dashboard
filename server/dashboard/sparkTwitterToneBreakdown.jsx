@@ -15,7 +15,7 @@ class SparkTwitterToneBreakdown extends Component{
     }
 
     getApiRequest() {
-    	console.log("Calling getApiRquest for tone widget");
+    	//console.log("Calling getApiRquest for tone widget");
         return {
             id: 'sparkTwitter.getToneBreakdown',
             params: {

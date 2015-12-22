@@ -18,7 +18,7 @@ var client = function (mozaik) {
             		resolve();
             	})
                 .then(function (res) {
-                	console.log("Calling Api with params: ", params);
+                	//console.log("Calling Api with params: ", params);
                 	return messageHubBridge.getTopicMessage(params.topic);
                 });
         },
@@ -27,7 +27,7 @@ var client = function (mozaik) {
             		resolve();
             	})
                 .then(function (res) {
-                	console.log("Calling Api with params: ", params);
+                	//console.log("Calling Api with params: ", params);
                 	return messageHubBridge.getTopicMessage(params.topic);
                 });
         }
