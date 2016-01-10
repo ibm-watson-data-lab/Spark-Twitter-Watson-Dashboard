@@ -17,7 +17,10 @@ var consumerInstanceName = "spark_twitter_consumer_instance";
 var topics = ["topHashTags", "topHashTags.toneScores"];
 
 function messageHubBridge(){
-	var services = process.env.VCAP_SERVICES || configManager.get("DEV_VCAP_CONFIG");
+	var services = configManager.get("DEV_VCAP_CONFIG");
+	if ( !services ){
+		services = JSON.parse(process.env.VCAP_SERVICES);
+	}
 	var instance = new MessageHub(services);
 	instance.topics.get()
 		.then( function(response){
