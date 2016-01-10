@@ -56,3 +56,5 @@ require('./server/dashboard/dashboard')(app);
 
 //Start the MessageHub/kafka bridge
 require('./server/messageHubBridge');
+
+require("cf-deployment-tracker-client").track();

@@ -2,7 +2,7 @@
 declared-services:
   messagehub-spark:
     label: messagehub
-    plan: Beta
+    plan: standard
 applications:
 - name: spark-twitter-dashboard
   memory: 512M
