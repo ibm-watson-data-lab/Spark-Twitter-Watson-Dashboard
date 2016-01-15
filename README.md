@@ -11,7 +11,7 @@ You can follow a detailed tutorial [here](https://developer.ibm.com/clouddataser
 
 ## Deploy to IBM Bluemix
 
-The fastest way to deploy this application to Bluemix is to click the **Deploy to Bluemix** button below. If you prefer instead to deploy manually to Bluemix then read the entirety of this section.
+The fastest way to deploy this application to Bluemix is to click the **Deploy to Bluemix** button below. If you prefer instead to deploy manually to Bluemix skip ahead to the next section.
 
 [![Deploy to Bluemix](https://deployment-tracker.mybluemix.net/stats/1cf78b25577e3e58e5c33589753beae8/button.svg)](https://bluemix.net/deploy?repository=https://github.com/ibm-cds-labs/Spark-Twitter-Watson-Dashboard)
 
@@ -19,7 +19,7 @@ The fastest way to deploy this application to Bluemix is to click the **Deploy t
 
 ##Build and Deploy Locally
 
-### Configuring Cloud Foundry
+### Configure Cloud Foundry
 
 Complete these steps first if you have not already:
 
@@ -28,9 +28,7 @@ Complete these steps first if you have not already:
 3. Follow the instructions at the above link to log in to Bluemix.
 
 
-### Build and Deploy
-
-####Build
+###Build
 
 <p>Before you deploy this app, build it using the <a href="http://gulpjs.com/">gulp framework</a>. The build handles the following tasks:</p>
 
@@ -42,7 +40,7 @@ Complete these steps first if you have not already:
 
 <p>To start the build manually, call <code>gulp build</code></p>
 
-####Deploy
+###Deploy
 
 To deploy to Bluemix, simply:
 
