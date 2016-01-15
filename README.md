@@ -7,7 +7,7 @@ This sample Spark Streaming application collects Twitter data and run analytics 
 ##Real-time dashboard:
 ![Running Realtime dashboard](http://developer.ibm.com/clouddataservices/wp-content/uploads/sites/47/2016/01/Running-Spark-Dashboard.png)
 
-You can follow a detailed tutorial [here](https://developer.ibm.com/clouddataservices/)
+You can follow a detailed tutorial [here](http://developer.ibm.com/clouddataservices/2016/01/15/real-time-sentiment-analysis-of-twitter-hashtags-with-spark/)
 
 ## Deploy to IBM Bluemix
 
