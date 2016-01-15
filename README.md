@@ -1,5 +1,5 @@
 # Spark-Twitter-Watson-Dashboard
-This sample Spark Streaming application collects Twitter data and run analytics in real-time that compute the top hashtags as well as a distribution of the emotional tones (provided by Watson Tone Analyzer). The results are then displayed into a real-time dashboard.
+This sample Spark Streaming application collects Twitter data and run analytics in real-time that compute the top hashtags as well as a distribution of the emotional tones (provided by Watson Tone Analyzer). Then results show on a live dashboard web app featuring dynamic graphics that update continuously.
 
 ##Architecture:
 ![Spark+Watson+Twitter Part 2 Architecture](http://developer.ibm.com/clouddataservices/wp-content/uploads/sites/47/2015/12/Spark-Watson-Twiiter-Part2-Architecture.png)
@@ -21,7 +21,7 @@ The fastest way to deploy this application to Bluemix is to click the **Deploy t
 
 ### Configure Cloud Foundry
 
-Complete these steps first if you have not already:
+If you haven't already:
 
 1. [Install the Cloud Foundry command line interface.](https://www.ng.bluemix.net/docs/#starters/install_cli.html)
 2. Follow the instructions at the above link to connect to Bluemix.
