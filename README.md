@@ -30,7 +30,8 @@ If you haven't already:
 
 ###Build
 
-<p>Before you deploy this app, build it using the <a href="http://gulpjs.com/">gulp framework</a>. The build handles the following tasks:</p>
+_Note: This section is optional and only applies if you make changes to the application_
+<p>To build the application, you need to use the <a href="http://gulpjs.com/">gulp framework</a>. The build handles the following tasks:</p>
 
 <ol>
 <li>Collect and copy various artifacts to the build area, like fonts, styles, and imgs.</li>
