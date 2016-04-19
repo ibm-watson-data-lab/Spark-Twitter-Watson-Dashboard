@@ -24,6 +24,11 @@ var config = {
             columns: 5, rows: 100,
             widgets: [
                 {
+                    type: 'sparkTwitter.stats',
+                    columns: 2, rows: 6,
+                    x: 0, y: 0
+                },
+                {
                     type: 'sparkTwitter.top_hash_tags',
                     columns: 3, rows: 45,
                     x: 1, y: 4

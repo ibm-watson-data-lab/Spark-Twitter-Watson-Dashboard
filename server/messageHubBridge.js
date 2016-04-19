@@ -26,12 +26,13 @@ var MessageHub = require('message-hub-rest');
 var bluemixHelperConfig = require('bluemix-helper-config');
 var configManager = bluemixHelperConfig.configManager;
 var _ = require("lodash");
+var async=require("async");
 
 //Store the messages by topics
 var messagesByTopics={};
 
 var consumerInstanceName = "spark_twitter_consumer_instance";
-var topics = ["topHashTags", "topHashTags.toneScores"];
+var topics = ["topHashTags", "topHashTags.toneScores", "total_tweets"];
 
 function messageHubBridge(){
 	var services = configManager.get("DEV_VCAP_CONFIG");
@@ -89,42 +90,59 @@ function messageHubBridge(){
 			console.log("Failed to get list of topics: ", error);
 		});
 	
+	//Synchronized FIFO queue used to consume/produce topics to MessageHub instance
+	var callQueue = async.queue(function(taskRunner, callback){
+		taskRunner.run(callback);
+	},1);	//Limited to 1 concurrent worker to make it synchronous
+	
 	//Helper that consumer a topic from MessageHub
 	var consumeTopic = function( topic ){
 		console.log("Create MessageHub consumer for topic: " + topic );
 		instance.consume('consumer_' + topic, consumerInstanceName, { 'auto.offset.reset': 'largest' })
 			.then( function( response ){
 				var consumerInstance = response[0];
-				var inProgress = false;
-				//Set the interval for messages consuming
-				setInterval( function(){
-					if ( inProgress ){
-						return;
-					}
-					inProgress = true;
-					consumerInstance.get(topic)
-						.then(function(data) {
-							inProgress = false;
-							if ( _.isArray(data) ){
-								if ( data.length > 0 ){
-									//Take only the last value
-									try{
-										messagesByTopics[topic] = JSON.parse( data[data.length - 1] );
-									}catch(e){
-										console.log("Unable to parse Message Hub data", e, data[data.length-1]);
-									}
+				var task = {
+					run: function(callback){
+						var that = this;
+						consumerInstance.get(topic)
+							.then(function(data){
+								that.consume(data);
+								return callback();
+							})
+							.fail(function(error){
+								console.log("got error: ", error);
+								return callback(error);
+							})
+					},
+					schedule: function(){
+						setTimeout(function(){
+							callQueue.push(this,this.done);
+						}.bind(this),4000);
+					},
+					consume: function(data){
+						if ( _.isArray(data) ){
+							if ( data.length > 0 ){
+								//Take only the last value
+								try{
+									messagesByTopics[topic] = JSON.parse( data[data.length - 1] );
+								}catch(e){
+									console.log("Unable to parse Message Hub data", e, data[data.length-1]);
 								}
-							}else{
-								messagesByTopics[topic] = data;
 							}
-						})
-						.fail(function(error) {
-							inProgress = false;
-							if ( !error.message || error.message.indexOf("409") < 0 ){
-								console.log("Unable to consume topic: " + topic, error);
-							}
-						});
-				}, 4000);
+						}else{
+							messagesByTopics[topic] = data;
+						}
+					},
+					done: function(err){
+						if( err ){
+							console.log("Unable to consume topic: " + topic, err );
+						}
+						this.data.schedule();
+					}
+				};
+				
+				//Kick start the queue
+				task.schedule();
 			})
 			.fail( function(error){
 				console.log("Unable to get consumer instance for topic: " + topic, error);

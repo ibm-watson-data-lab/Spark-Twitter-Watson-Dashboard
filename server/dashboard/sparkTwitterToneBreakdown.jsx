@@ -42,7 +42,17 @@ class SparkTwitterToneBreakdown extends Component{
     	var data = retData.columns;
     	_.forEach( this.chart.data(), function(t){
     		if ( !_.find(data, function(u){
-    			return u[0]===t.id;
+    			if( u[0]!==t.id || !t.values || u.length != t.values.length+1){
+    				return false;
+    			}else{
+    				//Check each values for identity
+    				for( var i=1;i<u.length;i++){
+    					if(t.values[i-1].value==undefined || u[i]!=t.values[i-1].value){
+    						return false;
+    					}
+    				}    				
+    			}
+    			return true;
     		})){
     			retData.unload.push(t.id);
     		}
