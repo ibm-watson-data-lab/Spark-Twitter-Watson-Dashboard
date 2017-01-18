@@ -45,7 +45,7 @@
     "node-uuid": "^1.4.1",
     "oauth": "0.9.10",
     "passport": "~0.2.2",
-    "react": "^0.13.3",
+    "react": "^0.14.0",
     "react-mixin": "^3.0.0",
     "reflux": "^0.2.12",
     "request": "~2.58.0",
