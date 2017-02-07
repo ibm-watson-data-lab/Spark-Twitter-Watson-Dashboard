@@ -52,7 +52,7 @@
     "superagent": "^1.4.0",
     "superagent-bluebird-promise": "^2.1.0",
     "when": "~3.7.3",
-    "ws": "~0.7.2"
+    "ws": "~2.0.0"
   },
   "devDependencies": {
     "mocha": "*"
