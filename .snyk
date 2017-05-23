@@ -1,0 +1,16 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:ms:20170412':
+    - cloudant > debug > ms:
+        patched: '2017-05-23T07:20:11.648Z'
+    - bluemix-helper-config > cloudant > debug > ms:
+        patched: '2017-05-23T07:20:11.648Z'
+    - bluemix-helper-sso > bluemix-helper-config > cloudant > debug > ms:
+        patched: '2017-05-23T07:20:11.648Z'
+    - bluemix-helper-sso > express-session > debug > ms:
+        patched: '2017-05-23T07:20:11.648Z'
+    - morgan > debug > ms:
+        patched: '2017-05-23T07:20:11.648Z'
