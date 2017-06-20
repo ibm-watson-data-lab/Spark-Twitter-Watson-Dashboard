@@ -4,7 +4,9 @@
   "description": "Real time dashboard for the Twitter Sentiment analysis using Spark Streaming and Watson",
   "main": "server.js",
   "scripts": {
-    "postinstall": "node ./node_modules/bower/bin/bower cache clean && node ./node_modules/bower/bin/bower install"
+    "postinstall": "node ./node_modules/bower/bin/bower cache clean && node ./node_modules/bower/bin/bower install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -52,12 +54,14 @@
     "superagent": "^1.4.0",
     "superagent-bluebird-promise": "^2.1.0",
     "when": "~3.7.3",
-    "ws": "~0.7.2"
+    "ws": "~0.7.2",
+    "snyk": "^1.35.0"
   },
   "devDependencies": {
     "mocha": "*"
   },
   "author": "david_taieb@us.ibm.com",
   "license": "Apache-2.0",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "snyk": true
 }

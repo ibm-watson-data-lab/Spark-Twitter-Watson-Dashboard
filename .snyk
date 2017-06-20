@@ -1,0 +1,22 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:ms:20170412':
+    - mozaik > browserify > crypto-browserify > browserify-sign > elliptic > hash.js > mocha > debug > ms:
+        patched: '2017-06-20T07:20:10.644Z'
+    - mozaik > watchify > browserify > crypto-browserify > browserify-sign > elliptic > hash.js > mocha > debug > ms:
+        patched: '2017-06-20T07:20:10.644Z'
+    - mozaik > browserify > crypto-browserify > create-ecdh > elliptic > hash.js > mocha > debug > ms:
+        patched: '2017-06-20T07:20:10.644Z'
+    - mozaik > watchify > browserify > crypto-browserify > create-ecdh > elliptic > hash.js > mocha > debug > ms:
+        patched: '2017-06-20T07:20:10.644Z'
+    - mozaik > browserify > crypto-browserify > browserify-sign > elliptic > hmac-drbg > hash.js > mocha > debug > ms:
+        patched: '2017-06-20T07:20:10.644Z'
+    - mozaik > watchify > browserify > crypto-browserify > browserify-sign > elliptic > hmac-drbg > hash.js > mocha > debug > ms:
+        patched: '2017-06-20T07:20:10.644Z'
+    - mozaik > browserify > crypto-browserify > create-ecdh > elliptic > hmac-drbg > hash.js > mocha > debug > ms:
+        patched: '2017-06-20T07:20:10.644Z'
+    - mozaik > watchify > browserify > crypto-browserify > create-ecdh > elliptic > hmac-drbg > hash.js > mocha > debug > ms:
+        patched: '2017-06-20T07:20:10.644Z'
