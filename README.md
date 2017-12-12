@@ -11,7 +11,7 @@ You can follow a detailed tutorial [here](http://developer.ibm.com/clouddataserv
 
 ## Deploy to IBM Cloud
 
-The fastest way to deploy this application to Bluemix is to click the **Deploy to IBM Cloud** button below. If you prefer instead to deploy manually to IBM Cloud skip ahead to the next section.
+The fastest way to deploy this application to IBM Cloud is to click the **Deploy to IBM Cloud** button below. If you prefer instead to deploy manually to IBM Cloud skip ahead to the next section.
 
 [![Deploy to IBM Cloud](https://metrics-tracker.mybluemix.net/stats/9ab07ee76ae677da2235e250f1798412/button.svg)](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-data-lab/Spark-Twitter-Watson-Dashboard)
 
@@ -24,9 +24,8 @@ The fastest way to deploy this application to Bluemix is to click the **Deploy t
 If you haven't already:
 
 1. [Install the Cloud Foundry command line interface.](https://www.ng.bluemix.net/docs/#starters/install_cli.html)
-2. Follow the instructions at the above link to connect to Bluemix.
-3. Follow the instructions at the above link to log in to Bluemix.
-
+2. Follow the instructions at the above link to connect to IBM Cloud.
+3. Follow the instructions at the above link to log in to IBM Cloud.
 
 ### Build
 
