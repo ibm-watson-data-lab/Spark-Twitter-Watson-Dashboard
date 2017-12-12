@@ -1,0 +1,8 @@
+id: https://github.com/ibm-watson-data-lab/Spark-Twitter-Watson-Dashboard
+runtimes: 
+ - Cloud Foundry
+services: 
+ - Message Hub
+event_id: web
+event_organizer: dev-journeys
+language: nodejs
