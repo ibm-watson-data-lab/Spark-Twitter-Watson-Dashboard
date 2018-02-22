@@ -1,6 +1,6 @@
 {
   "name": "spark-twitter-watson-dashboard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Real time dashboard for the Twitter Sentiment analysis using Spark Streaming and Watson",
   "main": "server.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ibm-cds-labs/Spark-Twitter-Watson-Dashboard.git"
+    "url": "https://github.com/ibm-watson-data-lab/Spark-Twitter-Watson-Dashboard.git"
   },
   "keywords": [
     "spark"
@@ -26,7 +26,7 @@
     "c3": "^0.4.10",
     "cfenv": "*",
     "metrics-tracker-client": "*",
-    "cloudant": "^1.0.0",
+    "cloudant": "^1.10.0",
     "cookie-parser": "~1.3.5",
     "d3": "<=3.5.0",
     "debug": "~2.0.0",
