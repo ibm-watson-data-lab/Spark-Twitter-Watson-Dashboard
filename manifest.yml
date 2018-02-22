@@ -4,7 +4,7 @@ declared-services:
     label: messagehub
     plan: standard
 applications:
-- name: spark-twitter-dashboard
+- name: spark-twitter-dashb
   memory: 512M
   instances: 1
   domain: mybluemix.net
