@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "async": "^1.2.1",
-    "babel": "^5.8.23",
+    "babel": "^6.0.0",
     "base64url": "0.0.6",
     "bluebird": "^2.10.2",
     "bluemix-helper-config": "^0.1.7",
@@ -55,7 +55,7 @@
     "superagent-bluebird-promise": "^2.1.0",
     "when": "~3.7.3",
     "ws": "~0.7.2",
-    "snyk": "^1.85.0"
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "mocha": "*"

@@ -8,3 +8,12 @@ patch:
         patched: '2018-06-26T02:27:45.630Z'
     - mozaik > superagent > form-data > mime:
         patched: '2018-06-26T02:27:45.630Z'
+  'npm:lodash:20180130':
+    - babel > babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2018-07-03T02:25:33.788Z'
+    - mozaik > lodash:
+        patched: '2018-07-03T02:25:33.788Z'
+    - mozaik > babelify > babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2018-07-03T02:25:33.788Z'
+    - mozaik > babelify > babel-core > lodash:
+        patched: '2018-07-03T02:25:33.788Z'
