@@ -50,7 +50,7 @@
     "react": "^0.13.3",
     "react-mixin": "^3.0.0",
     "reflux": "^0.2.12",
-    "request": "~2.81.0",
+    "request": "~2.84.0",
     "superagent": "^2.0.0",
     "superagent-bluebird-promise": "^2.1.0",
     "when": "~3.7.3",
