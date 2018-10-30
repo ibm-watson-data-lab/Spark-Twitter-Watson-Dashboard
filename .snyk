@@ -8,3 +8,22 @@ patch:
         patched: '2018-06-26T02:27:45.630Z'
     - mozaik > superagent > form-data > mime:
         patched: '2018-06-26T02:27:45.630Z'
+  'npm:minimatch:20160620':
+    - mozaik > glob > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
+    - mozaik > babelify > babel-core > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
+    - mozaik > browserify > glob > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
+    - mozaik > watchify > browserify > glob > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
+    - mozaik > gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
+    - mozaik > gulp > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
+    - mozaik > watchify > chokidar > readdirp > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
+    - mozaik > gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
+    - mozaik > gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2018-10-30T03:25:39.404Z'
