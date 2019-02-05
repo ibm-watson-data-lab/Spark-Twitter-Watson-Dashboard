@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "async": "^1.2.1",
-    "babel": "^5.8.23",
+    "babel": "^6.0.0",
     "base64url": "0.0.6",
     "bluebird": "^2.10.2",
     "bluemix-helper-config": "^0.1.7",
@@ -38,7 +38,7 @@
     "express-session": "1.11.3",
     "jsonfile": "^2.2.1",
     "jws": "0.2.5",
-    "lodash": "~3.9.3",
+    "lodash": "~4.17.11",
     "message-hub-rest": "^1.0.1",
     "morgan": "^1.6.0",
     "mozaik": "https://github.com/DTAIEB/mozaik.git",
